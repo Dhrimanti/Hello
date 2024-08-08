@@ -1,0 +1,27 @@
+<html>
+    <script>
+        function add(){
+            const title = document.getElementById("title").value;
+            const title2 = document.getElementById("title2").value;
+            const originalHtml=document.getElementById("container").innerHTML
+            document.getElementById("container").innerHTML =originalHtml+
+            `
+            <div>${title}</div>
+            <div>${title2}</div>
+            <button onclick="aler()">Mark as done</button>
+
+            `
+        }
+        function aler(){
+            alert("Marked as done!");
+        }
+    </script>
+    <div>
+        <input type="text" id="title" placeholder="title"><br>
+        <input type="text" id="title2" placeholder="title2"><br>
+        <button type="button" onclick="add()">Is a button</button>
+        <div id="container">
+
+        </div>
+    </div>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badmos Chora</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <script>
+        async function getanimaldata(){
+            const response=await fetch("https://fakerapi.it/api/v1/persons")
+            const final=await response.json();
+            console.log(final)
+            
+        }
+    </script>
+    <button onclick="getanimaldata()">Bhai animal data ke liye dabade</button>
+    
+</body>
+</html>

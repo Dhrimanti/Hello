@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function calculateSum() {
+        const element=document.getElementById("finalsum");
+        const firstNum=parseInt(document.getElementById("badmos").value);
+        const secondNum=parseInt(document.getElementById("chora").value);
+        fetch("https://sum-server.100xdevs.com/sum?a="+firstNum +"&b="+secondNum)
+        .then(function(response){
+            response.text().then(function(ans){
+                document.getElementById("finalsum").innerHTML=ans
+            })
+        });
+    
+    async function badmos() {
+        const element=document.getElementById("finalsum");
+        const firstNum=parseInt(document.getElementById("badmos").value);
+        const secondNum=parseInt(document.getElementById("chora").value);
+        const res=await fetch("https://sum-server.100xdevs.com/sum?a="+firstNum +"&b="+secondNum)
+        const ans=await res.text();
+        document.getElementById("finalsum").innerHTML=ans;
+
+    }}
+
+
+
+</script>
+<body>
+    <input type="text" id="badmos" placeholder="First Number" onchange="calculateSum()"/>
+    <br>
+    <input type="text" id="chora" placeholder="Second Number" onchange="calculateSum()"/>
+    <button onclick="badmos()">Calculate sum</button>
+    <div id="finalsum"> </div>
+    
+</body>
+</html>
