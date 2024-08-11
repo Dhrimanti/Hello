@@ -1,11 +1,13 @@
 import React from 'react'
 
-const dashboard = () => {
+const Dashboard = () => {
   return (
     <div>
+        Bloody Mary
       
     </div>
   )
 }
 
-export default dashboard
+export default Dashboard
+
