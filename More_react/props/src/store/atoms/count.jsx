@@ -1,11 +1,5 @@
-import React from 'react'
-
-const count = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
-
-export default count
+import {atom} from 'recoil';
+const countAtom=atom({
+    key: 'countAtom',
+    default: 0;
+})
