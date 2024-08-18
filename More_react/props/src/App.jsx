@@ -1,6 +1,5 @@
 import { useState,useContext } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 import { CountContext } from './context';
 import { countAtom } from './store/atoms/count';
@@ -8,22 +7,23 @@ import { useRecoilState } from 'recoil';
 
 
 function App() {
+
   
   return (
     <>
-    <CountContext.Provider value={{ count, setCount }}>
-      <Count setCount={setCount}/>
-    </CountContext.Provider>
+    
+      <Count />
+    
     <Buttons count={count} setCount={setCount}/>
     
     </>
   )
 }
 
-function Count({count}) {
+function Count() {
   return (
     <div>
-      <CountRenderer count={count}/>
+      <CountRenderer/>
     </div>
   );
 }
@@ -37,7 +37,7 @@ function CountRenderer() {
 }
 
 function Buttons({count, setCount}) {
-  const [count,setCount]=useRecoilState(countAtom);
+  
   
 
   return (
