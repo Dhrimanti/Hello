@@ -1,12 +1,13 @@
 import './App.css'
 import { RecoilRoot, useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil'
-import { notifications, totalNotificationSelector } from './atoms'
+import { notifications, totalNotificationSelector ,todosAtomFamily} from './atoms'
 import { useEffect } from 'react'
 import axios from 'axios'
 
 function App() {
-  return <RecoilRoot>
-    <MainApp />
+  return <RecoilRoot >
+    <Todo id={1}/>
+    <Todo id={2}/>
   </RecoilRoot>
 }
 
