@@ -14,7 +14,7 @@ function App() {
     
       <Count />
     
-    <Buttons count={count} setCount={setCount}/>
+    
     
     </>
   )
@@ -24,19 +24,21 @@ function Count() {
   return (
     <div>
       <CountRenderer/>
+      <Buttons />
     </div>
   );
 }
 
 function CountRenderer() {
-  const {count}=useContext(CountContext);
+  const count=useRecoilValue(countAtom); 
 
   
   
   return <div>{count}</div>;
 }
 
-function Buttons({count, setCount}) {
+function Buttons() {
+  const count=0;
   
   
 
